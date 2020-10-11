@@ -58,22 +58,22 @@ response:
 
 ```
 
-url: `/block/user/?username=<username>`
+url: `/block/user/?username=<username>`    
 method: POST  
 request:  {"token": \<auth_token\>}  
 response:  {"state":"x user blocked"}
 
-url: `/unblock/user/?username=<username>`
+url: `/unblock/user/?username=<username>`    
 method: POST  
 request:  {"token": \<auth_token\>}  
 response:  {"state":"x user unblocked"}
 
-url: `/send_message/`
+url: `/send_message/`    
 method: POST  
 request:  {"token": \<auth_token\>, "username":\<reciever\>, "message":\<message\>}  
 response:  {"state":"success"}
 
-url: `/chat/last_messages/`
+url: `/chat/last_messages/`     
 method: POST  
 request:  {"token": \<auth_token\>, "username":\<username\>}  
 response:  last message of every user who messaged loged in user, also count of unread messages
