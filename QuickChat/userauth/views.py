@@ -117,8 +117,8 @@ class ListUsers(APIView):
 
     def post(self, request):
         try:
-            user = self.get_object(request.data['username'])
-            token = UserModel.objects.get(token=request.data['token'])
+            # user = self.get_object(request.data['username'])
+            user = UserModel.objects.get(token=request.data['token'])
         except (MultiValueDictKeyError, KeyError):
             return Response({"error":"not authenticated"}, status=status.HTTP_401_UNAUTHORIZED)
         if user is False : 

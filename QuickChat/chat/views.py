@@ -55,6 +55,8 @@ class SendMessage(APIView):
             return Response({"error":"not authenticated"}, status=status.HTTP_401_UNAUTHORIZED)
         if sender == False or reciever == False:
             return Response({"error":"reciever does not exist"}, status=status.HTTP_404_NOT_FOUND)
+        if BlockingModel.objects.filter(username=reciever, blocked_user=sender).count() > 0:
+            return Response({"error":"you are blocked"}, status=status.HTTP_200_OK)
         if verify_token(sender,request) : 
             chat = ChatModel(sender=sender, reciever=reciever, message=message)
             chat.save()
