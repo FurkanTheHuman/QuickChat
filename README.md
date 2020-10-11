@@ -24,6 +24,10 @@ For production:
 `docker-compose -f docker-compose.prod.yml up -d --build` 
 
 
+## Running Tests
+With `python3 manage.py test` runsthe unit tests
+You should be in the QuickChat directory to run this command 
+
 ## API reference
 base: `/api/v1/`  
 Every path is starts with base   
