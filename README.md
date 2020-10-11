@@ -14,6 +14,9 @@ server runs at `localhost:8000/`
 #### with docker-compose
 there are two docker-compose files. First is for development, second for the production. 
 
+server runs at `localhost:1337/`  
+behind nginx and also uses postgresql
+
 For development:   
 `docker-compose up -d --build` 
 
@@ -36,7 +39,7 @@ method: POST
 request: {"username":\<username\>, "email":\<email\>, "password": \<password\>}  
 response: {"token": \<auth_token\>}  
 
-url: `/contacts/all/`
+url: `/contacts/all/`    
 method: POST  
 request:  {"token": \<auth_token\>}  
 response: {"users":\[{"username":\<username\>, ...}\]}
