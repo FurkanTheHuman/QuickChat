@@ -29,7 +29,7 @@ base: `/api/v1/`
 Every path is starts with base   
 NOTE: urls must end with "\\"    
 Recommended curl structure:    
-`curl --header "Content-Type: application/json"   --request POST   --data '{"usernmae":"x","password":"y",...}'   http://localhost:1337/api/v1/soem/path/`
+`curl --header "Content-Type: application/json"   --request POST   --data '{"username":"x","password":"y",...}'   http://localhost:1337/api/v1/soem/path/`
 
 
 
