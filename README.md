@@ -30,7 +30,7 @@ You should be in the QuickChat directory to run this command
 
 ## API reference
 base: `/api/v1/`  
-Every path is starts with base   
+Every path starts with base   
 NOTE: urls must end with "\\"    
 Recommended curl structure:    
 `curl --header "Content-Type: application/json"   --request POST   --data '{"username":"x","password":"y",...}'   http://localhost:1337/api/v1/soem/path/`
@@ -51,6 +51,8 @@ url: `/contacts/all/`
 method: POST  
 request:  {"token": \<auth_token\>}  
 response: {"users":\[{"username":\<username\>, ...}\]}
+about: prints all users
+
 
 url: `/chat/history/?username=<username>`   
 method: POST  
@@ -68,6 +70,7 @@ response:
 }
 
 ```
+about: shows you the post history also shows you if your message are seen by other user
 
 url: `/block/user/?username=<username>`    
 method: POST  
@@ -83,9 +86,11 @@ url: `/send_message/`
 method: POST  
 request:  {"token": \<auth_token\>, "username":\<reciever\>, "message":\<message\>}  
 response:  {"state":"success"}
+NOTE: username is reciever in this context 
+
 
 url: `/chat/last_messages/`     
 method: POST  
 request:  {"token": \<auth_token\>, "username":\<username\>}  
-response:  last message of every user who messaged loged in user, also count of unread messages
+response:  last message of every user who messaged logged in user, also count of unread messages
 
