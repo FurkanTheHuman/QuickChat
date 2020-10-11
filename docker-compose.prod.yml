@@ -5,6 +5,7 @@ services:
     build: 
         context: ./QuickChat
         dockerfile: Dockerfile.prod
+    image: furkanax/quickchat
     command: gunicorn QuickChat.wsgi:application --bind 0.0.0.0:8000
     expose:
       - 8000
@@ -23,6 +24,7 @@ services:
 
   nginx:
     build: ./nginx
+    image: furkanax/nginx
     ports:
       - 1337:80
     volumes:
