@@ -50,7 +50,7 @@ response: {"token": \<auth_token\>}
 url: `/contacts/all/`    
 method: POST  
 request:  {"token": \<auth_token\>}  
-response: {"users":\[{"username":\<username\>, ...}\]}
+response: {"users":\[{"username":\<username\>, ...}\]}   
 about: prints all users
 
 
@@ -85,7 +85,7 @@ response:  {"state":"x user unblocked"}
 url: `/send_message/`    
 method: POST  
 request:  {"token": \<auth_token\>, "username":\<reciever\>, "message":\<message\>}  
-response:  {"state":"success"}
+response:  {"state":"success"}   
 NOTE: username is reciever in this context 
 
 
