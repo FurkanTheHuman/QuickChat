@@ -25,7 +25,7 @@ For production:
 
 
 ## Running Tests
-With `python3 manage.py test` runsthe unit tests    
+With `python3 manage.py test` run the unit tests    
 You should be in the QuickChat directory to run this command 
 
 ## API reference
