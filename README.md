@@ -23,6 +23,9 @@ For development:
 For production:   
 `docker-compose -f docker-compose.prod.yml up -d --build` 
 
+For using admin panel run `docker-compose -f docker-compose.prod.yml exec web python manage.py collectstatic --no-input --clear`
+Admin panel still would run without it but nginx wouldn't server static files
+
 
 ## Running Tests
 With `python3 manage.py test` run the unit tests    
